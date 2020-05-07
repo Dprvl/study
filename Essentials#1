@@ -90,3 +90,30 @@ let result = [];
         return result.join(".");    
 
 }
+
+// DNA pair
+
+
+function DNAStrand(dna){
+let result = [];
+  for (i = 0; i< dna.length; i++) {
+      switch (dna[i]) {
+      case 'A': result[i] = 'T'; break;
+      case 'T': result[i] = 'A'; break;
+      case 'G': result[i] = 'C'; break;
+      case 'C': result[i] = 'G'; break;
+    }
+  }
+  return result.join("");
+}
+
+//Reversing words in a string
+
+function reverseWords(str) {
+  return str.split(" ").map(el => {
+      return el.split("").map((letter, i, el) => {
+        return letter[i-1] = el[el.length-i-1];
+      }).join("");
+  }).join(" ");
+}
+
